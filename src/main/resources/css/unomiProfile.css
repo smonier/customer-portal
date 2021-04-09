@@ -1,0 +1,165 @@
+#unomiProfile .module_body {
+  height: 275px;
+}
+
+#unomiProfile a {
+  position: relative;
+  display: inline;
+  color: #2572c2;
+}
+
+#unomiProfile a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+#unomiProfile .h6, h6 {
+  font-size: 1rem;
+}
+
+#unomiProfile .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+#unomiProfile .userGreeting {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  font-size:22px;
+  width:100%;
+}
+
+#unomiProfile .userTable {
+  display: table;
+  width: 100%;
+}
+
+#unomiProfile .userCol {
+  display: table-cell;
+}
+
+#unomiProfile .profileTable {
+  display: table;
+  width: 100%;
+  border-spacing: 10px;
+}
+
+#unomiProfile .profileRow {
+  display: table-row;
+}
+
+#unomiProfile .profileCol {
+  display: table-cell;
+}
+
+#unomiProfile .userPicCol {
+  display: table-cell;
+  width: 120px !important;
+  height: 130px !important;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px;
+}
+
+#unomiProfile .userPicCol img {
+  vertical-align: middle;
+}
+
+#unomiProfile .profile-picture {
+  border-radius: 50%;
+  width: 110px;
+  margin: 0;
+}
+
+/* Preferences modal */
+#portalPreferences .modal .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 325px;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+#portalPreferences .modal .modal-content {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22.5px;
+  padding: 15px 15px;
+  box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+  border-radius: .25rem;
+  height: 380px;
+  width: 100%;
+}
+
+#portalPreferences .modal .modal-body {
+  padding: 15px 15px;
+}
+
+#portalPreferences .modal.fade .modal-dialog {
+//left: 0px;
+  margin-top:10%;
+  margin-left:45%;
+  -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+  -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+  transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+#portalPreferences .modal.fade.in .modal-dialog {
+  left: 0;
+}
+
+#portalPreferences .modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+#portalPreferences .modal-header {
+  border-bottom-color: #eeeeee;
+  background-color: #f8f9fa;
+}
+
+#portalPreferences .close {
+  float: right;
+  display: inline;
+}
+
+#portalPreferences .modal-buttons {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#portalPreferences .modal-buttons button {
+  background-color: #00a1e4;
+  border: 2px solid #00a1e4;
+  border-radius: 60px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 12px;
+}
+
+#portalPreferences .modal-buttons button:hover {
+  background-color: #002839;
+  border: 2px solid #002839;
+  color: #fff;
+  cursor: pointer;
+}
+
+#portalPreferences .modal-buttons button.active {
+  background-color: #0062cc;
+  border: 2px solid #005cbf;
+  color: #fff;
+  cursor: pointer;
+}

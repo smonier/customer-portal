@@ -1,0 +1,49 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+<portalmix = 'http://www.jahia.org/portal/mix/1.0'>
+<portalnt = 'http://www.jahia.org/portal/nt/1.0'>
+
+[portalmix:portalComponent] > jmix:editorialContent, jmix:droppableContent mixin
+
+[portalnt:unomiProfile] > jnt:content, mix:title, portalmix:portalComponent
+ - jExpProperty (string, choicelist[jExpProfilePropertiesInitializer='{"cardName":"*"}',resourceBundle]) multiple indexed=no
+
+[portalnt:touchpoints] > jnt:content, jmix:droppableContent, jmix:siteComponent, mix:title, portalmix:portalComponent
+
+[portalnt:touchpointConfig] > jnt:content, jmix:editorialContent, jmix:structuredContent, mix:title, portalmix:portalComponent
+ - defaultTab (boolean, checkbox[Yes])
+ - tabDisplayName (string)
+ - tabType (string, choicelist) = 'Orders' mandatory indexed=no < 'Orders', 'Tickets', 'Subscriptions', 'KPIs', 'Status', 'YouTube',
+ 'Twitter'
+ - jsonType (string, choicelist) = 'Url' indexed=no < 'Url', 'Body'
+ - jsonUrl (string)
+ - jsonBody (string, textarea)
+ - tabPriority (long)
+
+[portalnt:portalContentList] > jnt:content, jmix:editorialContent, jmix:listContent, jmix:nodeReference, mix:title, portalmix:portalComponent
+ - contentType (string, choicelist) < 'Tips and Tricks', 'Marketing Tutorials', 'Developer Tutorials'
+ - folder (weakreference, picker[type='contentfolder']) < 'jnt:contentFolder'
+
+[portalnt:portalFileList] > jnt:content, jmix:bindedComponent, jmix:editorialContent, jmix:link, jmix:listContent, mix:title, portalmix:portalComponent
+ - folder (weakreference, picker[type='folder'])
+ - contentType (string, choicelist) < 'Case Studies', 'Webinar Recordings', 'Product Information'
+
+
+[portalnt:portalObjectList] > jnt:content, mix:title, portalmix:portalComponent, jmix:list, portalmix:portalList
+ - categoryFilter (weakreference, category[autoSelectParent=false]) multiple
+ - maxItems (long) = 1 indexed=no
+
+//*** CONTENT LINKER //
+[portalmix:portalList] mixin
+ - portalListType (string, choicelist[portalListInitializer,resourceBundle]) indexed=no < 'contentList', 'folderList'
+
+[portalmix:folderList] > jmix:templateMixin mixin
+ extends = portalmix:portalList
+ - fileFolder (weakreference, picker[type='folder'])
+
+[portalmix:contentList] > jmix:templateMixin mixin
+ extends = portalmix:portalList
+ - contentType (string, choicelist[subnodetypes = 'jmix:basicContent,jmix:editorialContent,jmix:structuredContent',resourceBundle]) indexed=no mandatory
+ - contentFolder (weakreference, picker[type='contentfolder'])
+// CONTENT LINKER ***//

@@ -1,0 +1,71 @@
+#touchpoints .module_body {
+    height: 275px;
+}
+
+#touchpoints .tabs {
+    overflow: hidden;
+    padding: 0px 12px;
+}
+
+#touchpoints .tabs button {
+    background-color: #00a1e4;
+    border: 2px solid #00a1e4;
+    border-radius: 60px;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 5px;
+    font-weight: 400;
+    padding: 10px 12px;
+    color: #fff;
+}
+
+#touchpoints .tabs button:hover {
+    background-color: #002839;
+    border: 2px solid #002839;
+    color: #fff;
+    cursor: pointer;
+}
+
+#touchpoints .tabs button.active {
+    background-color: #0062cc;
+    border: 2px solid #005cbf;
+    color: #fff;
+    cursor: pointer;
+}
+
+#touchpoints .tabcontent {
+    animation: fadeEffect 1s;
+    display: none;
+    padding: 12px 12px;
+}
+
+#touchpoints @keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#touchpoints .dataTables_wrapper {
+    font-size: 14px
+}
+
+#touchpoints .dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border: 0px;
+}
+
+#touchpoints th, td {
+    white-space: nowrap;
+}
+
+#touchpoints table.dataTable.compact th {
+    border-bottom: 1px none #111111;
+}
+
+#touchpoints table.dataTable.no-footer {
+    border-bottom: 0px solid #111;
+}
